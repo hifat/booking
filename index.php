@@ -1,5 +1,8 @@
 <?php
     include('php/config.php');
+
+    //ตรง $_SESSION[''] ใส่ให้ตรงกับ SESSION ที่เก็บ id เช่น $_SESSION['stu_id']
+    //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
     
     if(!isset($_SESSION['emp_id'])){
         header('Location: search_book.php');

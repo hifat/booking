@@ -13,6 +13,9 @@
 
             $row = mysqli_fetch_assoc($result);
 
+            //ตรง ตรง $_SESSION[''] กับ $row[''] ใส่ค่าให้ตรงกับ "ฟิลด์" ใน database
+            //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
+
             $_SESSION['emp_id'] = $row['emp_id'];
             $_SESSION['emp_fname'] = $row['emp_fname'];
             $_SESSION['emp_lname'] = $row['emp_lname'];

@@ -1,7 +1,10 @@
 <?php
     include('php/config.php');
 
-    if(isset($_SESSION['stu_id']) || isset($_SESSION['adm_id'])){
+    //ตรง $_SESSION[''] ใส่ให้ตรงกับ SESSION ที่เก็บ id เช่น $_SESSION['stu_id']
+    //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
+
+    if(isset($_SESSION['stu_id']) || isset($_SESSION['emp_id'])){
         
         $sql = "SELECT * FROM book"; //ชื่อตาราง
         $result = mysqli_query($connect, $sql);

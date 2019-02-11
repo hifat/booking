@@ -3,7 +3,7 @@
     $host = 'localhost';
     $username = 'root';
     $password = '';
-    $database = 'booking';
+    $database = 'booking'; //ชื่อ database
     
     $connect = mysqli_connect($host, $username, $password, $database);
     mysqli_set_charset($connect, "utf8");

@@ -3,6 +3,8 @@
 
     $id = $_GET['id'];
 
+    // $sql = "DELETE FROM ชื่อตาราง WHERE ฟิลด์ที่เก็บไอดี = '$id'";
+
     $sql = "DELETE FROM student WHERE stu_id = '$id'";
     $result = mysqli_query($connect, $sql);
 

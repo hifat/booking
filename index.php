@@ -1,7 +1,7 @@
 <?php
     include('php/config.php');
 
-    //ตรง $_SESSION[''] ใส่ให้ตรงกับ SESSION ที่เก็บ id เช่น $_SESSION['stu_id']
+    //ตรง $_SESSION['emp_id'] ใส่ให้ตรงกับ SESSION ที่เก็บ id ตรงไฟล์ login.php เช่น $_SESSION['stu_id']
     //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
     
     if(!isset($_SESSION['emp_id'])){
@@ -19,6 +19,7 @@
 <body>
     <table>
         <tr>
+            <!-- เพิ่มเมนูตรงนี้ -->
             <td><a href="member/index.php">ข้อมูลสมาชิก</a></td>
         </tr>
     </table>

@@ -3,6 +3,8 @@
     
     $id = $_GET['id'];
 
+    // $sql = "SELECT * FROM ชื่อตาราง WHERE ฟิลด์ที่เก็บไอดี = '$id'";
+
     $sql = "SELECT * FROM student WHERE stu_id = '$id'";
     $result = mysqli_query($connect, $sql);
 
@@ -19,24 +21,24 @@
 <body>
 
     <h1>แก้ไขข้อมูล</h1>
-
-    <form action="update.php?id=<?php echo $row['stu_id'] ?>" method="post">
+    <form action="update.php?id=<?php echo $row['stu_id'] ?>" method="post"> <!-- **บังคับ บรรทัดนี้ให้ใส่ $row['ฟิลด์ที่เก็บไอดี'] เท่านั้น** -->
         <table>
+            <!-- ในโจทย์ให้โชว์ไรบ้างก็ใส่ไปตามนั้น -->
             <tr>
                 <td>รหัสนักศึกษา</td>
-                <td><input type="text" name="stu_id" value="<?php echo $row['stu_id'] ?>"></td>
+                <td><input type="text" name="stu_id" value="<?php echo $row['stu_id'] ?>"></td> <!-- $row['ชื่อฟิล์ใน database'] -->
             </tr>
             <tr>
                 <td>รหัสนักศึกษา</td>
-                <td><input type="password" name="stu_password" value="<?php echo $row['stu_password'] ?>"></td>
+                <td><input type="password" name="stu_password" value="<?php echo $row['stu_password'] ?>"></td> <!-- $row['ชื่อฟิล์ใน database'] -->
             </tr>
             <tr>
                 <td>ชื่อ</td>
-                <td><input type="text" name="stu_fname" value="<?php echo $row['stu_fname'] ?>"></td>
+                <td><input type="text" name="stu_fname" value="<?php echo $row['stu_fname'] ?>"></td> <!-- $row['ชื่อฟิล์ใน database'] -->
             </tr>
             <tr>
                 <td>สกุล</td>
-                <td><input type="text" name="stu_lname" value="<?php echo $row['stu_lname'] ?>"></td>
+                <td><input type="text" name="stu_lname" value="<?php echo $row['stu_lname'] ?>"></td> <!-- $row['ชื่อฟิล์ใน database'] -->
             </tr>
             <tr>
                 <td colspan="2">

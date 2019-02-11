@@ -6,6 +6,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
+        // $sql = "SELECT * FROM ชื่อตรางพนักงาน WHERE ฟิลด์ที่เก็บไอดี = '".$username."' AND ฟิลด์ที่เก็บพาส = '".$password."' ";
         $sql = "SELECT * FROM employee WHERE emp_id = '".$username."' AND emp_password = '".$password."' ";
         $result = mysqli_query($connect, $sql);
 
@@ -13,9 +14,10 @@
 
             $row = mysqli_fetch_assoc($result);
 
-            //ตรง ตรง $_SESSION[''] กับ $row[''] ใส่ค่าให้ตรงกับ "ฟิลด์" ใน database
+            //ตรง $_SESSION[''] กับ $row[''] ใส่ค่าให้ตรงกับ "ฟิลด์" ใน database
             //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
 
+            //$_SESSION['ชื่อฟิลด์'] = $row['ชื่อฟิลด์']; (จะเก็บไรบ้างก็ ใส่ไปตามนั้น)
             $_SESSION['emp_id'] = $row['emp_id'];
             $_SESSION['emp_fname'] = $row['emp_fname'];
             $_SESSION['emp_lname'] = $row['emp_lname'];

@@ -4,9 +4,11 @@
     //ตรง $_SESSION[''] ใส่ให้ตรงกับ SESSION ที่เก็บ id เช่น $_SESSION['stu_id']
     //ถ้าอ่านแล้วลบ comment ทิ้งด้วย
 
+    //       $_SESSION['ไอดีนักศึกษา']       $_SESSION['ไอดีพนักงาน']
     if(isset($_SESSION['stu_id']) || isset($_SESSION['emp_id'])){
         
-        $sql = "SELECT * FROM book"; //ชื่อตาราง
+        // $sql = "SELECT * FROM ชื่อตารางหนังสือ";
+        $sql = "SELECT * FROM book";
         $result = mysqli_query($connect, $sql);
 
     }
@@ -33,9 +35,9 @@
         </tr>
         <?php while($row = mysqli_fetch_assoc($result)){ ?>
         <tr>
-            <td><?php echo $row['book_id'] ?></td> <!-- ชื่อฟิลด์ใน Database -->
-            <td><?php echo $row['book_name'] ?></td>
-            <td><?php echo $row['book_status'] ?></td>
+            <td><?php echo $row['book_id'] ?></td> <!-- $row['ชื่อฟิลด์ใน Database'] -->
+            <td><?php echo $row['book_name'] ?></td> <!-- $row['ชื่อฟิลด์ใน Database'] -->
+            <td><?php echo $row['book_status'] ?></td> <!-- $row['ชื่อฟิลด์ใน Database'] -->
         </tr>
         <?php } ?>
     </table>

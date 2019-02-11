@@ -17,7 +17,7 @@
         <table>
             <tr>
                 <td>รหัสนักศึกษา</td>
-                <td><input type="text" name="stu_id"></td>
+                <td><input type="text" name="stu_id"></td> <!-- ใส่ name ให้ตรงกับใน database -->
             </tr>
             <tr>
                 <td>รหัสผ่านนักศึกษา</td>
